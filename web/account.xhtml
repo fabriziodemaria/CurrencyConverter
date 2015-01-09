@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <title>Welcome to the bank</title>
+    </h:head>
+    <h:body >
+        <h1>Welcome to the bank</h1>
+        
+        
+        <hr/>
+        
+        <h:form>
+            <h3>Convert</h3>
+            <p>
+                <h:outputLabel for="searchedCurr1" value="First Currency: "/>
+                <h:inputText id="searchedAcct" value="#{currManager.currentConv1}"/>
+            </p>
+            <p>
+                <h:outputLabel for="inpValue" value="Amount: "/>
+                <h:inputText id="inpValue" value="#{currManager.valueToConvert}"/>
+            </p>
+            <hr/>
+            
+            <p>
+                <h:outputLabel for="searchedCurr2" value="Second Currency: "/>
+                <h:inputText id="transactionAmount" value="#{currManager.currentConv2}"/>
+            </p>
+            <hr/>
+            <p>
+            <h:commandButton value="UpdateRates" action="#{currManager.updateCurr}"/>
+            <h:commandButton value="Convert!" action="#{currManager.displayCurr}"/>
+            </p>
+            <h:outputLabel for="curr1" rendered="#{currManager.valueConverted != 0.0}"  value="Converted value : "/>
+            <h:outputText id="curr1" value="#{currManager.valueConverted}"/>
+        </h:form>
+        
+    </h:body>
+</html>
+
