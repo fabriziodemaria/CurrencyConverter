@@ -1,6 +1,6 @@
 # Currency Converter 
 
-PROJECT SPECIFICATIONS:
+##PROJECT SPECIFICATIONS
 
 Develop a three-tier Web-based application in Java for on-line currency conversion that converts a specified amount from one currency to another, e.g. from SEK to EUR.
 Your converter should be able to convert between at least 4 different currencies.
